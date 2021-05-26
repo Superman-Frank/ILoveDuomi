@@ -1,0 +1,20 @@
+PODS:
+  - GTExtensionSDK (2.5.3)
+  - GTSDK (2.5.8.0)
+
+DEPENDENCIES:
+  - GTExtensionSDK
+  - GTSDK
+
+SPEC REPOS:
+  trunk:
+    - GTExtensionSDK
+    - GTSDK
+
+SPEC CHECKSUMS:
+  GTExtensionSDK: d8363e15fbc559a876ed5a675c6a82cebc29c938
+  GTSDK: ff766a90c2daa6dcef1940839e51784e7791146c
+
+PODFILE CHECKSUM: 4cf8f990fe6d4d3a7fdd40bc06ac0911b5efd724
+
+COCOAPODS: 1.10.1

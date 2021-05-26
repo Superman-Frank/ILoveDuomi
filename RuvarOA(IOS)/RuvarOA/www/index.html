@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=0.5, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+
+    <title>璐华OA</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/Jingle.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="bg">
+        <div class="page-container">
+            <h1><div class="logo"></div></h1>
+            <form action="home.html" method="post" >
+                <ul>
+                    <li>
+                        <div class="text_title">地址</div>
+                        <input type="text" id="txt_serverUrl" name="username" class="sevices" placeholder="请输入服务器地址">
+                    </li>
+                    <li>
+                        <div class="text_title">帐号</div>
+                        <input type="text" id="txt_LoginAccount" name="username" class="username" placeholder="请输入帐号">
+                    </li>
+                    <li>
+                        <div class="text_title">密码</div>
+                        <input type="password" id="txt_LoginPwd" name="password" class="password" placeholder="请输入密码">
+                        <li style="border:0;">
+                            <label for="chk_savePwd" class="savepwd">
+                                <input type="checkbox" id="chk_savePwd" />记住我 </label>
+                            <button type="submit" id="login">登录</button>
+                        </li>
+                        <div style="display:none;">
+                            <input type="checkbox" id="chk_autoLogin" />自动登录
+                        </div>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <div class="footer" id="footer">
+        <p>
+            广州市璐华计算机科技有限公司 &copy; 版权所有
+        </p>
+    </div>
+    <!-- Javascript -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- lib -->
+    <script type="text/javascript" src="js/lib/zepto.js"></script>
+    <script type="text/javascript" src="js/lib/Jingle.debug.js"></script>
+    <script type="text/javascript" src="js/lib/RSA.js"></script>
+    <script type="text/javascript" src="js/lib/Barrett.js"></script>
+    <script type="text/javascript" src="js/lib/BigInt.js"></script>
+    <!--- app -->
+    <script type="text/javascript" src="js/app/pubData.js"></script>
+    <script type="text/javascript" src="js/app/index.js"></script>
+    <script>
+    function ct() {
+        return document.compatMode == "BackCompat" ? document.body.clientHeight : document.documentElement.clientHeight;
+    }
+
+    var f = document.getElementById('footer');
+    (window.onresize = function() {
+        if (document.body.scrollHeight <= ct()) {
+            $("#footer").css('position', 'absolute');
+        } else {
+            $("#footer").css('position', '');
+        }
+    })();
+    </script>
+</body>
+
+</html>
